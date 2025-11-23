@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Windows 98 Edition</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- DESKTOP ICONS -->
+    <div class="desktop">
+        
+        <div class="icon" onclick="openWindow('window-about')">
+            <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-5.png" alt="My Computer">
+            <p>My Computer</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('window-projects')">
+            <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png" alt="Projects">
+            <p>My Projects</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('window-resume')">
+            <img src="https://win98icons.alexmeub.com/icons/png/notepad-5.png" alt="Resume">
+            <p>Resume.txt</p>
+        </div>
+
+        <div class="icon" onclick="openWindow('window-contact')">
+            <img src="https://win98icons.alexmeub.com/icons/png/outlook_express-5.png" alt="Contact">
+            <p>Contact Me</p>
+        </div>
+
+        <div class="icon trash">
+            <img src="https://win98icons.alexmeub.com/icons/png/recycle_bin_empty-4.png" alt="Recycle Bin">
+            <p>Recycle Bin</p>
+        </div>
+
+    </div>
+
+    <!-- WINDOW: MY PROJECTS -->
+    <div id="window-projects" class="window draggable" style="display: none; top: 10%; left: 20%;">
+        <div class="title-bar">
+            <div class="title-bar-text">C:\Desktop\My Projects</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="closeWindow('window-projects')"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <p>7 object(s) selected</p>
+            <div class="project-grid">
+                
+                <!-- 1. Calculator -->
+                <a href="https://github.com/Sriram-Nambiar/Calculator" target="_blank" class="project-icon">
+                    <img src="https://win98icons.alexmeub.com/icons/png/calculator-0.png">
+                    <p>Calculator</p>
+                </a>
+
+                <!-- 2. Currency Converter -->
+                <a href="https://github.com/Sriram-Nambiar/Currency-converter" target="_blank" class="project-icon">
+                    <img src="https://win98icons.alexmeub.com/icons/png/bar_graph-0.png">
+                    <p>Currency Conv</p>
+                </a>
+
+                <!-- 3. Notes App -->
+                <a href="https://github.com/Sriram-Nambiar/Notes-app" target="_blank" class="project-icon">
+                    <img src="https://win98icons.alexmeub.com/icons/png/write_wordpad-1.png">
+                    <p>Notes App</p>
+                </a>
+
+                <!-- 4. Snake Game -->
+                <a href="https://github.com/Sriram-Nambiar/Snake-Game" target="_blank" class="project-icon">
+                    <img src="https://win98icons.alexmeub.com/icons/png/game_solitaire-1.png">
+                    <p>Snake Game</p>
+                </a>
+
+                <!-- 5. Tic Tac Toe -->
+                <a href="https://github.com/Sriram-Nambiar/TicTacToe" target="_blank" class="project-icon">
+                    <img src="https://win98icons.alexmeub.com/icons/png/game_mine_1-0.png">
+                    <p>Tic Tac Toe</p>
+                </a>
+
+                <!-- 6. To Do List -->
+                <a href="https://github.com/Sriram-Nambiar/toDoList" target="_blank" class="project-icon">
+                    <img src="https://win98icons.alexmeub.com/icons/png/briefcase-2.png">
+                    <p>To-Do List</p>
+                </a>
+                
+                <!-- 7. Amazon Clone (Placeholder if you have it) -->
+                <!-- 
+                <a href="#" class="project-icon">
+                    <img src="https://win98icons.alexmeub.com/icons/png/msn_networking_monitor-1.png">
+                    <p>Amazon Clone</p>
+                </a> 
+                -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- WINDOW: ABOUT ME -->
+    <div id="window-about" class="window draggable" style="display: none; top: 15%; left: 25%;">
+        <div class="title-bar">
+            <div class="title-bar-text">About Me</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closeWindow('window-about')"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div style="text-align: center;">
+                <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-5.png" style="width: 50px;">
+                <h3>Welcome to My Portfolio!</h3>
+                <p>I am a Full Stack Developer who loves retro tech.</p>
+                <p>Built with HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WINDOW: RESUME -->
+    <div id="window-resume" class="window draggable" style="display: none; top: 5%; left: 30%; width: 300px;">
+        <div class="title-bar">
+            <div class="title-bar-text">Resume.txt - Notepad</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closeWindow('window-resume')"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <textarea style="width: 100%; height: 200px; resize: none;">
+NAME: Sriram-Nambiar
+ROLE: Web Developer
+
+SKILLS:
+- HTML, CSS, JavaScript
+- React, Node.js
+- Retro UI Design
+
+EDUCATION:
+- 1st Year Computer Science Degree (2029)
+
+EXPERIENCE:
+- Built 7+ web applications
+- Freelance Web Designer
+            </textarea>
+        </div>
+    </div>
+
+    <!-- WINDOW: CONTACT ME (NEW ADDITION) -->
+    <div id="window-contact" class="window draggable" style="display: none; top: 20%; left: 35%; width: 400px;">
+        <div class="title-bar">
+            <div class="title-bar-text">New Message - Outlook Express</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="closeWindow('window-contact')"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="contact-form">
+                
+                <div class="form-row">
+                    <label>To:</label>
+                    <input type="text" value="Sriram Nambiar" disabled>
+                </div>
+
+                <div class="form-row">
+                    <label>From:</label>
+                    <input type="text" placeholder="Your Name / Company">
+                </div>
+
+                <div class="form-row">
+                    <label>Subject:</label>
+                    <input type="text" value="Project Inquiry">
+                </div>
+
+                <textarea rows="6" class="message-box">
+Hi Sriram,
+
+I checked out your portfolio and projects. 
+I'd like to connect regarding...
+                </textarea>
+                
+                <fieldset>
+                    <legend>Find me on Socials</legend>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/Sriram-Nambiar" target="_blank">GitHub</a>
+                        <a href="https://twitter.com/" target="_blank">Twitter/X</a>
+                    </div>
+                </fieldset>
+
+                <div class="button-row">
+                    <!-- Replace 'your-email@example.com' with your actual email -->
+                    <a href="mailto:your-email@example.com" style="text-decoration: none; color: black;">
+                        <button>Send Message</button>
+                    </a>
+                    <button onclick="closeWindow('window-contact')">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- TASKBAR -->
+    <div class="taskbar">
+        <button class="start-button" onclick="toggleStartMenu()">
+            <img src="https://win98icons.alexmeub.com/icons/png/windows-0.png" alt="win">
+            <b>Start</b>
+        </button>
+        <div class="taskbar-divider"></div>
+        <div class="time-tray">
+            <span id="clock">12:00 PM</span>
+        </div>
+    </div>
+
+    <!-- START MENU -->
+    <div id="start-menu" class="window" style="display: none;">
+        <div class="sidebar">
+            <strong>Windows</strong> 98
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="https://win98icons.alexmeub.com/icons/png/update_cool-0.png"> 
+                <span>Windows Update</span>
+            </div>
+            <div class="menu-item" onclick="openWindow('window-projects')">
+                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png">
+                <span>My Projects</span>
+            </div>
+            <hr>
+            <div class="menu-item" onclick="alert('Shutting down...')">
+                <img src="https://win98icons.alexmeub.com/icons/png/shut_down_cool-0.png">
+                <span>Shut Down...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
