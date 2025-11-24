@@ -1,17 +1,17 @@
-// 1. Clock Functionality
+
 function updateClock() {
     const now = new Date();
     let hours = now.getHours();
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
+    hours = hours ? hours : 12; 
     document.getElementById('clock').textContent = `${hours}:${minutes} ${ampm}`;
 }
 setInterval(updateClock, 1000);
 updateClock();
 
-// 2. Start Menu Toggle
+
 function toggleStartMenu() {
     const menu = document.getElementById('start-menu');
     if (menu.style.display === 'none') {
@@ -21,7 +21,7 @@ function toggleStartMenu() {
     }
 }
 
-// Close start menu when clicking elsewhere
+
 document.addEventListener('click', function(e) {
     const menu = document.getElementById('start-menu');
     const startBtn = document.querySelector('.start-button');
@@ -30,7 +30,7 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// 3. Window Management (Open/Close)
+
 function openWindow(id) {
     const win = document.getElementById(id);
     win.style.display = 'block';
@@ -41,7 +41,6 @@ function closeWindow(id) {
     document.getElementById(id).style.display = 'none';
 }
 
-// Bring active window to front
 const windows = document.querySelectorAll('.window');
 windows.forEach(win => {
     win.addEventListener('mousedown', () => bringToFront(win));
@@ -52,8 +51,7 @@ function bringToFront(element) {
     element.style.zIndex = 20;
 }
 
-// 4. Drag Functionality
-// Makes any element with class 'draggable' movable by its title-bar
+
 document.querySelectorAll('.window').forEach(win => {
     const titleBar = win.querySelector('.title-bar');
     

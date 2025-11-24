@@ -1,18 +1,18 @@
-/* Core Desktop Styles */
+
 body {
-    /* Keep the teal color as a backup if image doesn't load */
+ 
     background-color: #008080; 
     
-    /* 1. PASTE YOUR IMAGE LINK INSIDE THE QUOTES BELOW */
+ 
     background-image: url('images/wallpaper1.jpg');
 
-    /* 2. This ensures the image covers the whole screen */
+ 
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
 
 
-    background-color: #008080; /* Classic Teal */
+    background-color: #008080;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -20,7 +20,7 @@ body {
     font-family: 'Pixelated MS Sans Serif', Arial, sans-serif;
 }
 
-/* Desktop Icons Grid */
+
 .desktop {
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@ body {
     text-shadow: 1px 1px #000;
 }
 
-/* Windows Positioning */
+
 .window {
     position: absolute;
     width: 400px;
@@ -69,7 +69,7 @@ body {
     background-color: #c0c0c0;
 }
 
-/* Project Grid inside the Window */
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -101,7 +101,6 @@ body {
     margin-top: 2px;
 }
 
-/* Taskbar Styles */
 .taskbar {
     position: fixed;
     bottom: 0;
@@ -138,7 +137,7 @@ body {
     margin-right: 5px;
 }
 
-/* Start Menu Styles */
+
 #start-menu {
     position: fixed;
     bottom: 32px;
